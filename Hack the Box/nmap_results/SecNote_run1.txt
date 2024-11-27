@@ -1,0 +1,10 @@
+# Nmap 7.94SVN scan initiated Wed Nov 27 13:20:31 2024 as: nmap -p- -T4 -oN nmap_results/SecNote_run1.txt 10.10.10.97
+Nmap scan report for 10.10.10.97
+Host is up (0.058s latency).
+Not shown: 65532 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+445/tcp  open  microsoft-ds
+8808/tcp open  ssports-bcast
+
+# Nmap done at Wed Nov 27 13:22:10 2024 -- 1 IP address (1 host up) scanned in 98.12 seconds
