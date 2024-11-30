@@ -582,3 +582,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExten
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\AutoLogonChecked
 
 ```
+
+NOTE: I ran into some issue with the buffer overflow program. Key takeaways/reminders are:
+1. Verify the payload on msfvenom
+2. Verify that the target IP address in the script isn't still set to the default.
+
+**Struggle:** I'm struggling to get the port forwarding to work. Looked into some forums and it seems that Hack the Box might block ssh over port 22. I attempted to change the port and I got further but it still failed to connect. I'm short on time, but I will circle back around.
+
+The new plink command is:
+```
+plink.exe -v -P 2222 -l root -pw toor -R 445:127.0.0.1:445 10.10.14.12"
+```
+NOTE: My IP address will change, so update it.
